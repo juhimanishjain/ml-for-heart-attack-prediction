@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap');
+body{
+  background-color:#caebf2;
+}
+
+.main-heading-bold{
+  font-size: 45px;
+  text-align: center;
+  margin:2% 0px;
+  font-family: 'Nunito Sans', sans-serif;
+  border-bottom: 2px solid #efefef;
+  color:#ff3b3f;
+}
+
+label{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  color: #696969;
+}
+
+
+input, select {
+  padding:4%;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius: 5%;
+  font-size: 16px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+::placeholder{
+  color: #000;
+}
+
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.main-container{
+  margin-top: 60px;
+  margin-left: 250px;
+  display: grid;
+  grid-template-columns: 28% 28% 28% 28%;
+  row-gap: 15px;
+  justify-content: center;
+}
+
+
+/* CSS */
+.button-24 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: relative;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  margin-left: 43%;
+  margin-top: 75px;
+  width: 150px;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+.final-statement, p{
+  font-size: 20px;
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 481px){
+  .main-heading-bold{
+    font-size: 30px;
+    margin-left: 8%;
+  }
+
+  .main-container{
+    grid-template-columns: 200% 200%;
+  }
+}
