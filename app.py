@@ -6,11 +6,11 @@ model=pickle.load(open('HeartAttackPrediction.pkl','rb'))
 
 app=Flask(__name__)
 
-@app.route('/',methods=['POST','GET'])
+@app.route('/',methods=['POST', 'GET'])
 def new():
     return render_template('heart_attack.html')
 
-@app.route('/heart-attack-prediction', methods=['POST', 'GET'])
+@app.route('/heart-attack-prediction', methods=['POST'])
 def predict():
   data1=float(request.form['age'])
   data2=float(request.form['sex'])
