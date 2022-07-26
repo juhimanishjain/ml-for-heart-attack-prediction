@@ -35,4 +35,5 @@ def predict():
       return 'Result: This model has predicted that you have high chances of suffering from heart attack. You should immediately consult a doctor.'
   return render_template('heart_attack.html',statement=final_statement())
 
-app.run(port=5000)
+if __name__=='__main__':
+    app.run(debug=True)
