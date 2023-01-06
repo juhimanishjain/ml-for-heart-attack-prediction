@@ -3,26 +3,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap');
 body{
-  background-color:#caebf2;
+  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  min-height: calc(100vh - 0px);
 }
 
 .main-heading-bold{
-  font-size: 45px;
+  font-size: 35px;
   text-align: center;
   margin:2% 0px;
   font-family: 'Nunito Sans', sans-serif;
   border-bottom: 2px solid #efefef;
-  color:#ff3b3f;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+h3{
+  margin-left: 4rem;
+  font-family: 'Nunito Sans', sans-serif;
+  color: white;
 }
 
 label{
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 18px;
-  color: #696969;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+  transform: translateY(0rem);
 }
 
 
-input, select {
+
+input[type="text"], select {
   padding:4%;
   border:0;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
@@ -31,8 +44,23 @@ input, select {
   font-family: 'Noto Sans', sans-serif;
 }
 
+input[type="text"], select{
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.4rem;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #d2d6da;
+  appearance: none;
+  border-radius: 0.5rem;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
 ::placeholder{
-  color: #000;
+  color: #000000;
 }
 
 select{
@@ -41,69 +69,83 @@ select{
   appearance: none;
 }
 
-.main-container{
-  margin-top: 60px;
-  margin-left: 250px;
-  display: grid;
+/* .main-container{
+  width:1200px;
+  margin-left: 300px;
+  margin-right: auto; */
+  /* display: grid;
   grid-template-columns: 28% 28% 28% 28%;
   row-gap: 15px;
   justify-content: center;
-}
-
+} */
 
 /* CSS */
-.button-24 {
-  background: #FF4742;
-  border: 1px solid #FF4742;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+.button-22 {
+  align-items: center;
+  appearance: button;
+  background-color: #0276FF;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #fff;
   cursor: pointer;
-  display: relative;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 16px;
-  min-height: 40px;
-  outline: 0;
-  padding: 12px 14px;
-  margin-left: 43%;
-  margin-top: 75px;
-  width: 150px;
-  text-rendering: geometricprecision;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: "RM Neue",sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 10px 21px;
+  text-align: center;
   text-transform: none;
+  transition: color .13s ease-in-out,background .13s ease-in-out,opacity .13s ease-in-out,box-shadow .13s ease-in-out;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  vertical-align: middle;
 }
 
-.button-24:hover,
-.button-24:active {
-  background-color: initial;
-  background-position: 0 0;
-  color: #FF4742;
+.button-22:active {
+  background-color: #006AE8;
 }
 
-.button-24:active {
-  opacity: .5;
+.button-22:hover {
+  background-color: #1C84FF;
 }
 
-.final-statement, p{
-  font-size: 20px;
-  font-family: 'Noto Sans', sans-serif;
+.main-container{
+  grid-template-columns: 200% 200%;
+}
+
+.column, .flex-box-container {
+  display: inline-grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1.5rem;
+}
+
+.column div, .flex-box-container div, .button-22{
+  width:21rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .flex-box-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1.5rem;
+} */
+
+/* .flex-box-container div, .button-22{
+  width:21rem;
+} */
+
+.button-22{
   text-align: center;
-  padding-top: 10px;
 }
 
-@media screen and (max-width: 481px){
-  .main-heading-bold{
-    font-size: 30px;
-    margin-left: 8%;
-  }
 
-  .main-container{
-    grid-template-columns: 200% 200%;
-  }
-}

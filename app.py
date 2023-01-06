@@ -10,7 +10,7 @@ app=Flask(__name__)
 def new():
     return render_template('heart_attack.html')
 
-@app.route('/heart-attack-prediction', methods=['POST'])
+@app.route('/heart-attack-prediction', methods=['POST', 'GET'])
 def predict():
   data1=float(request.form['age'])
   data2=float(request.form['sex'])

@@ -4,78 +4,120 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Heart Attack Prediction</title>
-    <link rel="stylesheet" href="static/heart_attack.css"/>
+    <link rel="stylesheet" href="../static/heart_attack.css"/>
   </head>
   <body>
-    <h1 class="main-heading-bold"> Machine Learning Model for Heart Attack Prediction</h1>
-    <form action="/heart-attack-prediction" method="POST">
+    <h1 class="main-heading-bold">Heart Attack Prediction</h1>
+    <h3>
+      Heart Attack is common amongst people suffering from cardiovascular diseases (CVDs) or who 
+      have high blood pressure, high cholesterol, and hypertension. Early detection and management 
+      play a vital role in improving heart health. This ML web-app can assist in predicting the possibility of a heart attack with an accuracy of 87%.
+    </h3>
+    
+    <form action="" method="POST">
       <div class="main-container" id="grid-container">
-        <input type="text" placeholder="Age" name="age" required="required">
-        <br>
-          <select name="sex" required="required">
-            <option value="0">Male</option>
-            <option value="1">Female</option>
-          </select>
-        </br>
-        <select name="chest-pain-type" required="required">
-          <option value="" disabled selected>Chest Pain Type</option>
-          <option value="1">Typical Angina</option>
-          <option value="2">Atypical Angina</option>
-          <option value="3">Non-Anginal Angina</option>
-          <option value="4">Asymptomatic</option>
-        </select>
-        <br>
-          <input type="text" id="rbp" name="rbp" required="required" placeholder="Resting Blood Pressure">
-        </br>
-        <input type="text" id="chol" name="chol" required="required" placeholder="Cholestrol">
-        <br>
-          <select class="fbs" name="fbs" required="required">
-            <option value="" disabled selected>Fasting Blood Sugar</option>
-            <option value="1">Fasting Blood Sugar greater than 120</option>
-            <option value="0">Fasting Blood Sugar lesser than or equal to 120</option>
-          </select>
-        </br>
-        <select class="rest_ecg" name="rest_ecg" required="required">
-          <option value="" disabled selected>Resting Electrocardiographic Results</option>
-          <option value="0">Normal</option>
-          <option value="1">Having ST-T wave abnormality </option>
-          <option value="2">Showing probable or definite left ventricular hypertrophy by Estes' criteria</option>
-        </select> 
-        <br>
-          <input type="text" id="max-heart-rate" name="max-heart-rate" required="required" placeholder="Maximum Heart Rate">
-        </br>
-        <select class="exang" name="exang" required="required">
-          <option value="" disabled selected>Exercise Induced Angina</option>
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-        <br>
-          <input type="text" id="oldpeak" name="oldpeak" required="required" placeholder="Old Peak">
-        </br>
-        <select class="slp" name="slp"required="required">
-          <option value="" disabled selected>Slope</option>
-          <option value="0">Downsloping</option>
-          <option value="1">Flat</option>
-          <option value="2">Upsloping</option>
-        </select>
-        <br>
-          <select class="ca" name="ca" required="required">
-            <option value="" disabled selected>Major Blood Vessels</option>
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-          </select>
-        </br>
-        <select class="thal" name="thal" required="required">
-          <option value="" disabled selected>Thalassemia Value</option>
-          <option value="0">Null</option>
-          <option value="1">Fixed Detect</option>
-          <option value="2">Normal Blood Flow</option>
-          <option value="3">Reversible Defect</option>
-        </select>
+        <div class="column">
+          <div><input type="text" placeholder="Age" name="age" required="required" id="age"></div>
+          <div>
+            <br>
+              <select name="sex" required="required" id="sex">
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+              </select>
+            </br>
+          </div>
+          <div>
+            <select name="chest-pain-type" required="required">
+              <option value="" disabled selected>Chest Pain Type</option>
+              <option value="1">Typical Angina</option>
+              <option value="2">Atypical Angina</option>
+              <option value="3">Non-Anginal Angina</option>
+              <option value="4">Asymptomatic</option>
+            </select>
+          </div>
+        </div>
+        <div class="column">
+          <div>
+            <br>
+              <input type="text" id="rbp" name="rbp" required="required" placeholder="Resting Blood Pressure">
+            </br>
+          </div>
+          <div><input type="text" id="chol" name="chol" required="required" placeholder="Cholestrol"></div>
+          <div>
+            <br>
+              <select class="fbs" name="fbs" required="required">
+                <option value="" disabled selected>Fasting Blood Sugar</option>
+                <option value="1">Fasting Blood Sugar greater than 120</option>
+                <option value="0">Fasting Blood Sugar lesser than or equal to 120</option>
+              </select>
+            </br>
+          </div>
+        </div>
+        <div class="column">
+          <div> 
+            <select class="rest_ecg" name="rest_ecg" required="required">
+              <option value="" disabled selected>Resting Electrocardiographic Results</option>
+              <option value="0">Normal</option>
+              <option value="1">Having ST-T wave abnormality </option>
+              <option value="2">Showing probable or definite left ventricular hypertrophy by Estes' criteria</option>
+            </select>
+          </div> 
+          <div>
+            <br>
+              <input type="text" id="max-heart-rate" name="max-heart-rate" required="required" placeholder="Maximum Heart Rate">
+            </br>
+          </div>
+          <div>
+            <select class="exang" name="exang" required="required">
+              <option value="" disabled selected>Exercise Induced Angina</option>
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+        </div>
+        <div class="column">
+          <div>
+            <br>
+              <input type="text" id="oldpeak" name="oldpeak" required="required" placeholder="Old Peak">
+            </br>
+          </div>
+          <div>
+            <select class="slp" name="slp"required="required">
+              <option value="" disabled selected>Slope</option>
+              <option value="0">Downsloping</option>
+              <option value="1">Flat</option>
+              <option value="2">Upsloping</option>
+            </select>
+          </div>
+          <div>
+            <br>
+              <select class="ca" name="ca" required="required">
+                <option value="" disabled selected>Major Blood Vessels</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </br>
+          </div>
+        </div>
+        <div class="flex-box-container">
+          <div id="thal-value">
+            <select class="thal" name="thal" required="required">
+              <option value="" disabled selected>Thalassemia Value</option>
+              <option value="0">Null</option>
+              <option value="1">Fixed Detect</option>
+              <option value="2">Normal Blood Flow</option>
+              <option value="3">Reversible Defect</option>
+            </select>
+          </div>
+          <div>
+            <br>
+              <button class="button-22" role="button" onclick="showMessage()">Calculate Heart Attack Probability</button>
+            </br>
+          </div>
+        </div>
       </div>
-      <br><button class="button-24" role="button" onclick="showMessage()">PREDICT</button></br>
       <b class="final-statement"><p>{{statement}}</p></b>
     </form>
   </body>
