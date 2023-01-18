@@ -8,13 +8,18 @@
   </head>
   <body>
     <h1 class="main-heading-bold">Heart Attack Prediction</h1>
-    <h3>
-      Heart Attack is common amongst people suffering from cardiovascular diseases (CVDs) or who 
-      have high blood pressure, high cholesterol, and hypertension. Early detection and management 
-      play a vital role in improving heart health. This ML web-app can assist in predicting the possibility of a heart attack with an accuracy of 87%.
-    </h3>
-    
-    <form action="" method="POST">
+    <div class="text">
+      <p class="text-for-large-screens">
+        <i>
+          Heart Attack is a life-threatening condition and one of the significant 
+          causes of morbidity in the world population. Timely detection of it can 
+          immensely assist in saving lives. This machine learning-based heart attack 
+          prediction(ML-HAP) analysis imminently risks factors and predicts the possibility 
+          of a heart attack.
+        </i>
+      </p>
+    </div>
+    <form action="/heart-attack-prediction" method="POST">
       <div class="main-container" id="grid-container">
         <div class="column">
           <div><input type="text" placeholder="Age" name="age" required="required" id="age"></div>
@@ -111,14 +116,16 @@
               <option value="3">Reversible Defect</option>
             </select>
           </div>
-          <div>
+          <div class="button">
             <br>
-              <button class="button-22" role="button" onclick="showMessage()">Calculate Heart Attack Probability</button>
+              <button class="button-22" role="button" onclick="showMessage()">
+                <b>Calculate Heart Attack Probability</b>
+                </button>
             </br>
           </div>
         </div>
       </div>
-      <b class="final-statement"><p>{{statement}}</p></b>
+      <div class="result"><p>{{statement}}</p></div>
     </form>
   </body>
 </html>

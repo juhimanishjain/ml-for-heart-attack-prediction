@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap');
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@1&display=swap');
+
+
 body{
   background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
   min-height: calc(100vh - 0px);
 }
 
 .main-heading-bold{
-  font-size: 35px;
+  font-size: 37px;
   text-align: center;
   margin:2% 0px;
   font-family: 'Nunito Sans', sans-serif;
@@ -51,7 +52,7 @@ input[type="text"], select{
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.4rem;
-  color: #495057;
+  color: #000000;
   background-color: #fff;
   border: 1px solid #d2d6da;
   appearance: none;
@@ -83,18 +84,19 @@ select{
 .button-22 {
   align-items: center;
   appearance: button;
-  background-color: #0276FF;
+  background-color: #fff;
   border-radius: 8px;
   border-style: none;
+  border-color: solid #9900cc;
   box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
   box-sizing: border-box;
-  color: #fff;
+  color: #9900cc;
   cursor: pointer;
   display: flex;
   flex-direction: row;
   flex-shrink: 0;
   font-family: "RM Neue",sans-serif;
-  font-size: 100%;
+  font-size: 15px;
   line-height: 1.15;
   margin: 0;
   padding: 10px 21px;
@@ -106,13 +108,13 @@ select{
   touch-action: manipulation;
 }
 
-.button-22:active {
+/* .button-22:active {
   background-color: #006AE8;
 }
 
 .button-22:hover {
   background-color: #1C84FF;
-}
+} */
 
 .main-container{
   grid-template-columns: 200% 200%;
@@ -148,4 +150,119 @@ select{
   text-align: center;
 }
 
+.button{
+  border: 3px solid #9900cc;
+  border-radius: 8px;
+}
 
+.text{
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: #fff;
+  font-family: 'Nunito Sans', sans-serif;
+  padding: 0.6rem;
+  padding-top: 0.1rem;
+  font-size: 20px;
+}
+
+.result{
+  width:inherit;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  font-family: 'Nunito Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 0.5rem;
+}
+
+/* alignments for different screen sizes */
+@media (min-width:1250px){
+  .main-heading-bold{
+    font-size: 38px;
+  }
+
+  .text{
+    width: inherit;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1100px){
+  .text{
+    width: inherit;
+    font-size: 18px;
+  }
+
+  .column div, .flex-box-container div {
+    width:inherit;
+    margin: 0.3rem;
+  }
+
+  .button{
+    width: fit-content;
+  }
+}
+
+@media all and (min-width:600px) and (max-width:800px){
+  .main-heading-bold{
+    font-size: 32px;
+  }
+
+  .column, .flex-box-container{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  .column div, .flex-box-container div, .button-22 {
+    width: 20rem;
+  }
+
+  .column div, #thal-value{
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 600px){
+  .main-heading-bold{
+    font-size: 23px;
+  }
+
+  .column, .flex-box-container{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  .column div, .flex-box-container div, .button-22 {
+    width: 17rem;
+  }
+
+  .column div, #thal-value{
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width:300px){
+  .column div, .flex-box-container div, .button-22 {
+    width: 15rem;
+  }
+}
+
+/* preventing chrome to autofill input field color from background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}

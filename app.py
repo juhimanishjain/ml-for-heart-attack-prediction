@@ -30,10 +30,10 @@ def predict():
   print(pred)
   def final_statement():
     if pred == 1:
-      return 'Result: The model has predicted that you will not suffer from heart attack. However, you should take care of your heart health.'
+      return 'Result: This model has predicted that you won\'t suffer from a heart attack, but you should take care of your heart health'
     elif pred == 0:
-      return 'Result: This model has predicted that you have high chances of suffering from heart attack. You should immediately consult a doctor.'
+      return 'Result: You should immediately consult a doctor, as this model has predicted that you can suffer from a heart attack'
   return render_template('heart_attack.html',statement=final_statement())
 
 if __name__=='__main__':
-    app.run(debug=True)
+    app.run(port=4999, debug=True)
